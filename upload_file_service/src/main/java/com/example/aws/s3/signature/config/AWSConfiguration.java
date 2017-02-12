@@ -12,7 +12,7 @@ import org.springframework.stereotype.Component;
  */
 @Component
 @PropertySource("classpath:aws.properties")
-@ConfigurationProperties(prefix = "com.aws.s3.sig")
+@ConfigurationProperties(prefix = "com.example.aws.s3.signature")
 public class AWSConfiguration {
 
 	public static final String S3_ACCESS_KEY = "${com.aws.s3.access.key}";
@@ -51,7 +51,7 @@ public class AWSConfiguration {
 	}
 
 	/**
-	 * Returns S3 Script log bucket name
+	 * Returns S3  bucket name
 	 * 
 	 * @return S3 bucket name
 	 */
@@ -61,7 +61,7 @@ public class AWSConfiguration {
 	}
 
 	/**
-	 * Returns current environment host name e.g: scripts etc.
+	 * Returns current environment host name.
 	 * 
 	 * @return host name
 	 */
